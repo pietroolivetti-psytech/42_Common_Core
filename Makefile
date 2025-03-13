@@ -1,5 +1,11 @@
 NAME	=   libft.a
 SRCS	=	ft_isdigit.c \
+ft_isalpha.c \
+ft_tolower.c \
+ft_toupper.c \
+ft_isalnum.c \
+ft_isprint.c \
+ft_isascii.c
 
 OBJS	= $(SRCS:.c=.o)
 RM		= rm -f
