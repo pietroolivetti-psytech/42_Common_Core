@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+    char s[50] = "Testing = 12";
+    printf("%d", ft());
+}
+
+
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+    char d[50];
+
+    ft_strcpy(d, "testing");
+    printf("%s", d);
+
+    return 0;
+}

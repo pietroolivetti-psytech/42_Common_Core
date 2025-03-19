@@ -1,0 +1,29 @@
+
+The command to compile is the following:
+
+cc -Wall -Wextra -Werror main.c -L. -lft -o test
+
+-L.: Tells the compiler to look for libraries in the current directory.
+-lft: Links against libft.a (the lib prefix and .a suffix are assumed).
+
+CONST: Enhanced Type Safety: By using const, you can ensure that values are not accidentally modified,
+reducing the chance of bugs and errors in your code. Improved Optimization: Compilers can optimize const variables more effectively,
+as they know that their values will not change during program execution
+
+SIZE_T: size_t is an unsigned long (%lu in printf)
+
+• strcat
+• strncat
+• strlcat
+• atoi
+• strchr
+• strrchr
+• strstr
+• strnstr
+• memset
+• bzero
+• memcpy
+• memccpy
+• memmove
+• memchr
+• memcmp
