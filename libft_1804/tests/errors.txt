@@ -1,0 +1,330 @@
+STRICT
+comecei do erro...
+ft_split        : KO
+ft_itoa         : OK
+ft_strmapi      : OK
+ft_striteri     : OK
+ft_putchar_fd   : OK
+ft_putstr_fd    : OK
+ft_putendl_fd   : OK
+ft_putnbr_fd    : OK
+ft_lstnew       : OK
+ft_lstadd_front : OK
+ft_lstsize      : OK
+ft_lstlast      : OK
+ft_lstadd_back  : OK
+ft_lstdelone    : OK
+ft_lstclear     : OK
+ft_lstiter      : OK
+ft_lstmap       : KO
+
+Errors found:
+For ft_split, in /home/pileonar/francinette/tests/libft/fsoares/test_split.c:
+
+Error in test 1: ft_split("hello!", 32:' '): expected 7 bytes, allocated 8 bytes
+Error in test 1: ft_split("hello!", 32:' '): 
+Memory leak: 0x5649ba0c38f0 - 4096 bytes
+You failed to free the memory allocated at:
+Error in test 2: ft_split("xxxxxxxxhello!", 120:'x'): expected 7 bytes, 
+allocated 8 bytes
+Error in test 3: ft_split("hello!zzzzzzzz", 122:'z'): expected 7 bytes, 
+allocated 8 bytes
+Error in test 4: ft_split("\t\t\t\thello!\t\t\t\t", 9:'\t'): expected 7 bytes, 
+allocated 8 bytes
+Error in test 7: ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", 94:'^'): expected 2 
+bytes, allocated 3 bytes
+Error in test 7: ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", 94:'^'): expected 4 
+bytes, allocated 5 bytes
+Error in test 7: ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", 94:'^'): expected 2 
+bytes, allocated 3 bytes
+Error in test 7: ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", 94:'^'): expected 4 
+bytes, allocated 5 bytes
+Error in test 8: ft_split("nonempty", 0:'\0'): expected 9 bytes, allocated 10 
+bytes
+
+For ft_lstmap, in /home/pileonar/francinette/tests/libft/fsoares/test_lstmap.c:
+
+Error in test 2: ft_lstmap(<list: {node: "hello!"}->(null)>, [s => __strlen(s)],
+[x => free(x)]) NULL check for 1th malloc: 
+Memory leak: 0x55af7be299f0 - 30 bytes
+You failed to free the memory allocated at:Most likely you are not calling del 
+on the content when a new list node allocation fails.
+
+Error in test 3: ft_lstmap(<list: {node: "one"}->{node: "two"}->{node: 
+"three"}->{node: "four"}->{node: "five"}->(null)>, [s => __strlen(s)], [x => 
+free(x)]) NULL check for 1th malloc: 
+Memory leak: 0x55af7be29e70 - 30 bytes
+You failed to free the memory allocated at:Most likely you are not calling del 
+on the content when a new list node allocation fails.
+
+Error in test 3: ft_lstmap(<list: {node: "one"}->{node: "two"}->{node: 
+"three"}->{node: "four"}->{node: "five"}->(null)>, [s => __strlen(s)], [x => 
+free(x)]) NULL check for 3th malloc: 
+Memory leak: 0x55af7be29ec0 - 30 bytes
+You failed to free the memory allocated at:Most likely you are not calling del 
+on the content when a new list node allocation fails.
+
+Error in test 3: ft_lstmap(<list: {node: "one"}->{node: "two"}->{node: 
+"three"}->{node: "four"}->{node: "five"}->(null)>, [s => __strlen(s)], [x => 
+free(x)]) NULL check for 5th malloc: 
+Memory leak: 0x55af7be29d80 - 30 bytes
+You failed to free the memory allocated at:Most likely you are not calling del 
+on the content when a new list node allocation fails.
+
+Error in test 3: ft_lstmap(<list: {node: "one"}->{node: "two"}->{node: 
+"three"}->{node: "four"}->{node: "five"}->(null)>, [s => __strlen(s)], [x => 
+free(x)]) NULL check for 7th malloc: 
+Memory leak: 0x55af7be29f40 - 30 bytes
+You failed to free the memory allocated at:Most likely you are not calling del 
+on the content when a new list node allocation fails.
+
+Error in test 3: ft_lstmap(<list: {node: "one"}->{node: "two"}->{node: 
+"three"}->{node: "four"}->{node: "five"}->(null)>, [s => __strlen(s)], [x => 
+free(x)]) NULL check for 9th malloc: 
+Memory leak: 0x55af7be2b4d0 - 30 bytes
+You failed to free the memory allocated at:Most likely you are not calling del 
+on the content when a new list node allocation fails.
+
+
+
+
+Summary: 
+
+Norminette Errors: tests/libft_tests.h, tests/ft_memchr/test_ft_memchr.c, tests/ft_strtrim/test_ft_strtrim.c, tests/ft_substr/test_ft_substr.c
+
+Failed tests: split, lstmap
+
+Geral:
+
+✔ Executing: make fclean all bonus
+ℹ Executing: libft-war-machine (https://github.com/y3ll0w42/libft-war-machine)
+--------------------------------------------------------------------------------
+|                              COMPILING LIBFT                                 |
+--------------------------------------------------------------------------------
+rules:
+all        $(NAME)       fclean       re           clean       bonus     libft.a
+ok         ok            ok           ok           ok          ok        found
+
+FUNCTION         TESTS                RESULT
+ft_isalpha       ✓✓✓✓✓✓✓              OK
+ft_isdigit       ✓✓✓✓✓✓✓              OK
+ft_isalnum       ✓✓✓✓✓✓✓              OK
+ft_isascii       ✓✓✓✓✓✓✓✓             OK
+ft_isprint       ✓✓✓✓✓✓✓              OK
+ft_strlen        ✓✓✓✓✓✓               OK
+ft_memset        ✓✓✓✓                 OK
+ft_bzero         ✓✓                   OK
+ft_memcpy        ✓✓✓                  OK
+ft_memmove       ✓✓✓✓✓                OK
+ft_strlcpy       ✓✓✓✓✓                OK
+ft_strlcat       ✓✓✓✓✓✓✓✓✓            OK
+ft_toupper       ✓✓✓✓✓✓✓              OK
+ft_tolower       ✓✓✓✓✓✓✓              OK
+ft_strchr        ✓✓✓✓✓✓               OK
+ft_strrchr       ✓✓✓✓✓✓✓✓             OK
+ft_strncmp       ✓✓✓✓✓✓✓✓✓✓✓          OK
+ft_memchr        ✓✓✓✓✓✓               OK
+ft_memcmp        ✓✓✓✓✓✓✓✓✓            OK
+ft_strnstr       ✓✓✓✓✓✓✓✓✓✓           OK
+ft_atoi          ✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓  OK
+ft_calloc        ✓                    OK
+ft_strdup        ✓                    OK
+ft_substr        ✓✓✓✓✓                OK
+ft_strjoin       ✓✓✓✓                 OK
+ft_strtrim       ✓✓✓✓✓                OK
+ft_split         ✓✓✓✓✓✓               OK
+ft_itoa          ✓✓✓✓✓✓✓✓✓✓           OK
+ft_strmapi       ✓                    OK
+ft_striteri      ✓                    OK
+ft_putchar_fd    ✓✓✓✓✓✓✓              OK
+ft_putstr_fd     ✓✓✓✓                 OK
+ft_putendl_fd    ✓✓✓✓                 OK
+ft_putnbr_fd     ✓✓✓✓✓✓✓✓✓            OK
+ft_lstnew        ✓✓✓                  OK
+ft_lstadd_front  ✓                    OK
+ft_lstsize       ✓                    OK
+ft_lstlast       ✓                    OK
+ft_lstadd_back   ✓                    OK
+ft_lstdelone     ✓                    OK
+ft_lstclear      ✓                    OK
+ft_lstiter       ✓                    OK
+ft_lstmap        ✓                    OK
+
+✔ Compiling tests: libftTester (https://github.com/Tripouille/libftTester)
+ℹ Testing:
+ft_isalpha	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 
+ft_isdigit	: 1.OK 2.OK 3.OK 4.OK 
+ft_isalnum	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 
+ft_isascii	: 1.OK 2.OK 3.OK 4.OK 
+ft_isprint	: 1.OK 2.OK 3.OK 4.OK 
+ft_strlen	: 1.OK 2.OK 
+ft_memset	: 1.OK 2.OK 
+ft_bzero	: 1.OK 2.OK 3.OK 
+ft_memcpy	: 1.OK 2.OK 3.OK 
+ft_memmove	: 1.OK 2.OK 3.OK 4.OK 
+ft_strlcpy	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 
+ft_strlcat	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 
+ft_toupper	: 1.OK 2.OK 3.OK 4.OK 
+ft_tolower	: 1.OK 2.OK 3.OK 4.OK 
+ft_strchr	: 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_strrchr	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 
+ft_strncmp	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 
+ft_memchr	: 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_memcmp	: 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_strnstr	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 
+ft_atoi		: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 
+ft_calloc	: 1.OK 2.MOK 
+ft_strdup	: 1.OK 2.MOK 3.OK 4.MOK 
+ft_substr	: 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.OK 8.MOK 9.OK 10.MOK 11.OK 12.MOK 13.OK 14.MOK 15.OK 16.MOK 
+ft_strjoin	: 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.OK 8.MOK 
+ft_strtrim	: 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.SIGSEGV
+ft_split	: 1.MOK 2.OK 3.MKO 4.OK 5.MKO 6.OK 7.OK 8.OK 9.OK 10.OK 11.MOK 12.OK 13.OK 14.MOK 15.OK 16.MOK 17.OK 18.OK 19.MOK 20.OK 21.OK 22.MOK 23.OK 24.OK 25.MOK 26.OK 27.MKO 28.OK 29.MOK 30.OK 31.MKO 32.OK 33.MKO 34.OK 35.MKO 36.OK 37.MKO 38.OK 39.MKO 40.OK 41.MKO 42.OK 
+ft_itoa		: 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.OK 8.MOK 9.OK 10.MOK 11.OK 12.MOK 
+ft_strmapi	: 1.OK 2.MOK 3.OK 4.MOK 
+ft_striteri	: 1.OK 2.OK 3.OK 
+ft_putchar_fd	: 1.OK 
+ft_putstr_fd	: 1.OK 
+ft_putendl_fd	: 1.OK 
+ft_putnbr_fd	: 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_lstnew	: 1.OK 2.OK 3.MOK 
+ft_lstadd_front	: 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_lstsize	: 1.OK 2.OK 3.OK 
+ft_lstlast	: 1.OK 2.OK 3.OK 4.OK 
+ft_lstadd_back	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+ft_lstdelone	: 
+ft_lstclear	: 1.OK 
+ft_lstiter	: 1.OK 2.OK 3.OK 4.OK 
+ft_lstmap	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 
+
+MKO: test about your malloc size (this shouldn't be tested by moulinette)
+
+Errors in:
+
+For /home/pileonar/francinette/tests/libft/Tripouille/tests/ft_strtrim_test.cpp:
+SIGSEGV 31: 	/* 7 */ check(!strcmp(s, ""));
+
+For /home/pileonar/francinette/tests/libft/Tripouille/tests/ft_split_test.cpp:
+MKO 29: 	/* 3 */ mcheck(tab[0], strlen("tripouille") + 1);
+MKO 32: 	/* 5 */ mcheck(tab[1], strlen("42") + 1);
+MKO 88: 	/* 27 */ mcheck(tab[0], strlen("Tripouille") + 1);
+MKO 97: 	/* 31 */ mcheck(tab[0], strlen("1") + 1);
+MKO 100: 	/* 33 */ mcheck(tab[1], strlen("2") + 1);
+MKO 103: 	/* 35 */ mcheck(tab[2], strlen("3") + 1);
+MKO 106: 	/* 37 */ mcheck(tab[3], strlen("4") + 1);
+MKO 109: 	/* 39 */ mcheck(tab[4], strlen("5") + 1);
+MKO 112: 	/* 41 */ mcheck(tab[5], strlen("42") + 1);
+
+✔ Compiling tests: libft-unit-test (https://github.com/alelievr/libft-unit-test)
+ℹ Testing:
+ft_isalpha      : [OK] 
+ft_isdigit      : [OK] 
+ft_isalnum      : [OK] 
+ft_isascii      : [OK] 
+ft_isprint      : [OK] 
+ft_strlen       : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memset       : [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_bzero        : [OK] [OK] [OK] [OK] 
+ft_memcpy       : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memmove      : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strlcpy      : [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strlcat      : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_toupper      : [OK] 
+ft_tolower      : [OK] 
+ft_strchr       : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strrchr      : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strncmp      : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memchr       : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memcmp       : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strnstr      : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_atoi         : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_calloc       : [OK] [OK] [OK] [OK] [OK] 
+ft_strdup       : [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_substr       : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strjoin      : [OK] [OK] [OK] [OK] [OK] 
+ft_strtrim      : [OK] [OK] [OK] [CRASH] [OK] [OK] [OK] [OK] [OK] 
+[crash]: your strtrim does not work with full blank input
+
+ft_split        : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_itoa         : [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strmapi      : [OK] [OK] [OK] [OK] [OK] 
+ft_striteri     : [OK] [OK] 
+ft_putchar_fd   : [OK] [OK] 
+ft_putstr_fd    : [OK] [OK] 
+ft_putendl_fd   : [OK] [OK] 
+ft_putnbr_fd    : [OK] [OK] [OK] [OK] [OK] 
+ft_lstnew       : [OK] [OK] [OK] [OK] 
+ft_lstadd_front : [OK] [OK] [OK] 
+ft_lstsize      : [OK] [OK] 
+ft_lstlast      : [OK] [OK] 
+ft_lstadd_back  : [OK] [OK] [OK] 
+ft_lstdelone    : [OK] 
+ft_lstclear     : [OK] [OK] [OK] 
+ft_lstiter      : [OK] 
+ft_lstmap       : [OK] 
+
+[crash]: your strtrim does not work with full blank input
+ Test code:
+ 	char *s1 = "  \t \t \n   \n\n\n\t";
+ 	char *s2 = "";
+ 	char *ret = ft_strtrim(s1, " \n\t");
+ 
+ 	if (!strcmp(ret, s2))
+ 		exit(TEST_SUCCESS);
+ 	exit(TEST_FAILED);
+ 
+ 
+✔ Compiling tests: fsoares (my own)
+ℹ Testing:
+ft_isalpha      : OK
+ft_isdigit      : OK
+ft_isalnum      : OK
+ft_isascii      : OK
+ft_isprint      : OK
+ft_strlen       : OK
+ft_memset       : OK
+ft_bzero        : OK
+ft_memcpy       : OK
+ft_memmove      : OK
+ft_strlcpy      : OK
+ft_strlcat      : OK
+ft_toupper      : OK
+ft_tolower      : OK
+ft_strchr       : OK
+ft_strrchr      : OK
+ft_strncmp      : OK
+ft_memchr       : OK
+ft_memcmp       : OK
+ft_strnstr      : OK
+ft_atoi         : OK
+ft_calloc       : OK
+ft_strdup       : OK
+ft_substr       : OK
+ft_strjoin      : OK
+ft_strtrim      : OK
+ft_split        : OK
+ft_itoa         : OK
+ft_strmapi      : OK
+ft_striteri     : OK
+ft_putchar_fd   : OK
+ft_putstr_fd    : OK
+ft_putendl_fd   : OK
+ft_putnbr_fd    : OK
+ft_lstnew       : OK
+ft_lstadd_front : OK
+ft_lstsize      : OK
+ft_lstlast      : OK
+ft_lstadd_back  : OK
+ft_lstdelone    : OK
+ft_lstclear     : OK
+ft_lstiter      : OK
+ft_lstmap       : OK
+
+Want some more thorough tests? run 'francinette --strict'.
+
+Summary: 
+
+Norminette Errors: tests/libft_tests.h, tests/ft_memchr/test_ft_memchr.c, tests/ft_strtrim/test_ft_strtrim.c, tests/ft_substr/test_ft_substr.c
+
+Failed tests: ft_strtrim, ft_split, strtrim
+
+Passed tests: isalpha, isdigit, isalnum, isascii, isprint, strlen, memset, bzero, memcpy, memmove, strlcpy, strlcat, toupper, tolower, strchr, strrchr, strncmp, memchr, memcmp, strnstr, atoi, calloc, strdup, substr, strjoin, split, itoa, strmapi, striteri, putchar_fd, putstr_fd, putendl_fd, putnbr_fd, lstnew, lstadd_front, lstsize, lstlast, lstadd_back, lstdelone, lstclear, lstiter, lstmap
